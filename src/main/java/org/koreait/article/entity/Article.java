@@ -1,16 +1,19 @@
-package org.koreait.motivation.entity;
+package org.koreait.article.entity;
 
 public class Article {
     private int id;
     private String title;
     private String body;
     private String regDate;
+    private String updateDate;
 
-    public Article(int id, String title, String body, String regDate) {
+    public Article(int id, String regDate, String updateDate, String title, String body) {
         this.id = id;
+        this.regDate = regDate;
+        this.updateDate = updateDate;
         this.title = title;
         this.body = body;
-        this.regDate = regDate;
+
     }
 
     public String getTitle() {
@@ -45,4 +48,11 @@ public class Article {
         this.regDate = regDate;
     }
 
+    public String getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
+    }
 }
